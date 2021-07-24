@@ -9,5 +9,12 @@ import Foundation
 
 
 struct Music {
-    
+    var title: String?
+    var artistName: String?
+    var genre: Int?
+    init(title: String, artistName: String, genre: Int) {
+        self.title = title
+        self.artistName = artistName
+        self.genre = genre
+    }
 }

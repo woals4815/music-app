@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B26AA16C26ABE42F00CA81BB /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26AA16B26ABE42F00CA81BB /* StackViewController.swift */; };
+		B26AA16E26ABE44600CA81BB /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26AA16D26ABE44600CA81BB /* PlaylistViewController.swift */; };
+		B26AA17026ABE7ED00CA81BB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26AA16F26ABE7ED00CA81BB /* TabBarController.swift */; };
+		B26AA17326ABEBF800CA81BB /* MusicListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26AA17126ABEBF800CA81BB /* MusicListCell.swift */; };
+		B26AA17426ABEBF800CA81BB /* MusicListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B26AA17226ABEBF800CA81BB /* MusicListCell.xib */; };
+		B26AA17826AC026200CA81BB /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26AA17726AC026200CA81BB /* MusicViewController.swift */; };
 		B2AB0D4D26ABCBD70005D263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AB0D4C26ABCBD70005D263 /* AppDelegate.swift */; };
 		B2AB0D4F26ABCBD70005D263 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AB0D4E26ABCBD70005D263 /* SceneDelegate.swift */; };
-		B2AB0D5126ABCBD70005D263 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AB0D5026ABCBD70005D263 /* ViewController.swift */; };
+		B2AB0D5126ABCBD70005D263 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AB0D5026ABCBD70005D263 /* MainViewController.swift */; };
 		B2AB0D5426ABCBD70005D263 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AB0D5226ABCBD70005D263 /* Main.storyboard */; };
 		B2AB0D5626ABCBD80005D263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2AB0D5526ABCBD80005D263 /* Assets.xcassets */; };
 		B2AB0D5926ABCBD80005D263 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AB0D5726ABCBD80005D263 /* LaunchScreen.storyboard */; };
@@ -17,10 +23,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B26AA16B26ABE42F00CA81BB /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		B26AA16D26ABE44600CA81BB /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
+		B26AA16F26ABE7ED00CA81BB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B26AA17126ABEBF800CA81BB /* MusicListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListCell.swift; sourceTree = "<group>"; };
+		B26AA17226ABEBF800CA81BB /* MusicListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicListCell.xib; sourceTree = "<group>"; };
+		B26AA17726AC026200CA81BB /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		B2AB0D4926ABCBD70005D263 /* music app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "music app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AB0D4C26ABCBD70005D263 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2AB0D4E26ABCBD70005D263 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B2AB0D5026ABCBD70005D263 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2AB0D5026ABCBD70005D263 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B2AB0D5326ABCBD70005D263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2AB0D5526ABCBD80005D263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2AB0D5826ABCBD80005D263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +92,7 @@
 		B2AB0D6126ABD1800005D263 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B26AA17226ABEBF800CA81BB /* MusicListCell.xib */,
 				B2AB0D5226ABCBD70005D263 /* Main.storyboard */,
 				B2AB0D5726ABCBD80005D263 /* LaunchScreen.storyboard */,
 			);
@@ -89,7 +102,12 @@
 		B2AB0D6226ABD1CF0005D263 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B2AB0D5026ABCBD70005D263 /* ViewController.swift */,
+				B2AB0D5026ABCBD70005D263 /* MainViewController.swift */,
+				B26AA16B26ABE42F00CA81BB /* StackViewController.swift */,
+				B26AA16D26ABE44600CA81BB /* PlaylistViewController.swift */,
+				B26AA16F26ABE7ED00CA81BB /* TabBarController.swift */,
+				B26AA17126ABEBF800CA81BB /* MusicListCell.swift */,
+				B26AA17726AC026200CA81BB /* MusicViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,6 +172,7 @@
 				B2AB0D5926ABCBD80005D263 /* LaunchScreen.storyboard in Resources */,
 				B2AB0D5626ABCBD80005D263 /* Assets.xcassets in Resources */,
 				B2AB0D5426ABCBD70005D263 /* Main.storyboard in Resources */,
+				B26AA17426ABEBF800CA81BB /* MusicListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,8 +183,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2AB0D5126ABCBD70005D263 /* ViewController.swift in Sources */,
+				B2AB0D5126ABCBD70005D263 /* MainViewController.swift in Sources */,
 				B2AB0D6426ABD25F0005D263 /* MusicModel.swift in Sources */,
+				B26AA16E26ABE44600CA81BB /* PlaylistViewController.swift in Sources */,
+				B26AA17326ABEBF800CA81BB /* MusicListCell.swift in Sources */,
+				B26AA16C26ABE42F00CA81BB /* StackViewController.swift in Sources */,
+				B26AA17026ABE7ED00CA81BB /* TabBarController.swift in Sources */,
+				B26AA17826AC026200CA81BB /* MusicViewController.swift in Sources */,
 				B2AB0D4D26ABCBD70005D263 /* AppDelegate.swift in Sources */,
 				B2AB0D4F26ABCBD70005D263 /* SceneDelegate.swift in Sources */,
 			);
