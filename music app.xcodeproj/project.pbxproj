@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B211C1F426AD36320099EA3C /* PlaylistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B211C1F226AD36320099EA3C /* PlaylistCell.swift */; };
+		B211C1F526AD36320099EA3C /* PlaylistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B211C1F326AD36320099EA3C /* PlaylistCell.xib */; };
+		B211C1F726AD3C720099EA3C /* PlaylistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B211C1F626AD3C720099EA3C /* PlaylistModel.swift */; };
+		B211C1F926AD78300099EA3C /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B211C1F826AD78300099EA3C /* ModalViewController.swift */; };
 		B26AA16C26ABE42F00CA81BB /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26AA16B26ABE42F00CA81BB /* StackViewController.swift */; };
 		B26AA16E26ABE44600CA81BB /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26AA16D26ABE44600CA81BB /* PlaylistViewController.swift */; };
 		B26AA17026ABE7ED00CA81BB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26AA16F26ABE7ED00CA81BB /* TabBarController.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B211C1F226AD36320099EA3C /* PlaylistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCell.swift; sourceTree = "<group>"; };
+		B211C1F326AD36320099EA3C /* PlaylistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistCell.xib; sourceTree = "<group>"; };
+		B211C1F626AD3C720099EA3C /* PlaylistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistModel.swift; sourceTree = "<group>"; };
+		B211C1F826AD78300099EA3C /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		B26AA16B26ABE42F00CA81BB /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		B26AA16D26ABE44600CA81BB /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		B26AA16F26ABE7ED00CA81BB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -85,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				B2AB0D6326ABD25F0005D263 /* MusicModel.swift */,
+				B211C1F626AD3C720099EA3C /* PlaylistModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,6 +101,7 @@
 		B2AB0D6126ABD1800005D263 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B211C1F326AD36320099EA3C /* PlaylistCell.xib */,
 				B26AA17226ABEBF800CA81BB /* MusicListCell.xib */,
 				B2AB0D5226ABCBD70005D263 /* Main.storyboard */,
 				B2AB0D5726ABCBD80005D263 /* LaunchScreen.storyboard */,
@@ -108,6 +118,8 @@
 				B26AA16F26ABE7ED00CA81BB /* TabBarController.swift */,
 				B26AA17126ABEBF800CA81BB /* MusicListCell.swift */,
 				B26AA17726AC026200CA81BB /* MusicViewController.swift */,
+				B211C1F226AD36320099EA3C /* PlaylistCell.swift */,
+				B211C1F826AD78300099EA3C /* ModalViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,6 +184,7 @@
 				B2AB0D5926ABCBD80005D263 /* LaunchScreen.storyboard in Resources */,
 				B2AB0D5626ABCBD80005D263 /* Assets.xcassets in Resources */,
 				B2AB0D5426ABCBD70005D263 /* Main.storyboard in Resources */,
+				B211C1F526AD36320099EA3C /* PlaylistCell.xib in Resources */,
 				B26AA17426ABEBF800CA81BB /* MusicListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +199,9 @@
 				B2AB0D5126ABCBD70005D263 /* MainViewController.swift in Sources */,
 				B2AB0D6426ABD25F0005D263 /* MusicModel.swift in Sources */,
 				B26AA16E26ABE44600CA81BB /* PlaylistViewController.swift in Sources */,
+				B211C1F726AD3C720099EA3C /* PlaylistModel.swift in Sources */,
+				B211C1F926AD78300099EA3C /* ModalViewController.swift in Sources */,
+				B211C1F426AD36320099EA3C /* PlaylistCell.swift in Sources */,
 				B26AA17326ABEBF800CA81BB /* MusicListCell.swift in Sources */,
 				B26AA16C26ABE42F00CA81BB /* StackViewController.swift in Sources */,
 				B26AA17026ABE7ED00CA81BB /* TabBarController.swift in Sources */,

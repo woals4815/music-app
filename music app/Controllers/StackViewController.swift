@@ -8,12 +8,17 @@
 import UIKit
 
 class StackViewController: UIViewController {
-
+    
+    var playlist: [Playlist] = [Playlist]()
+    
+    @IBOutlet weak var playlistTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        playlistTableView.delegate = self
+        playlistTableView.dataSource = self
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -23,5 +28,21 @@ class StackViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension StackViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return playlist.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaylistCell") as? PlaylistCell else {
+            fatalError("there's no cell")
+        }
+        cell.listName.text = playlist[indexPath.row].listName
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
 }

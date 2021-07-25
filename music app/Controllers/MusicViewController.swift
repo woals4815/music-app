@@ -45,6 +45,11 @@ class MusicViewController: UIViewController {
         artistName.text = defaultArtist
     }
     @IBAction func tabAddBtn(_ sender: UIButton) {
+        guard let modalVC = self.storyboard?.instantiateViewController(withIdentifier: "modalVC") else {
+             fatalError("No vc")
+        }
+        modalVC.modalPresentationStyle = .overFullScreen
+        present(modalVC, animated: true, completion: nil)
     }
     
 

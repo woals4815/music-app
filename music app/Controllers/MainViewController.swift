@@ -18,6 +18,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
         homeTableView.delegate = self
         homeTableView.dataSource = self
+        
         //MARK: Dummy Datas
         let musicTitles = ["Crazy(Cover)", "Day 1", "Leave the Door Open", "Come and Get Your Love", "Mr. Blue Sky"]
         let artistNames = ["Daniela Andrade", "HONNE", "Silk Sonic", "Redbone", "Electric Light Orchestra"]
@@ -26,6 +27,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         for i in 0..<dataCount {
             musicData.append(Music(title: musicTitles[i], artistName: artistNames[i], genre: genres[i]))
         }
+        
         //MARK: register reusable cell in viewdidload
         let nibName = UINib(nibName: "MusicListCell", bundle: nil)
         homeTableView.register(nibName, forCellReuseIdentifier: "MusicCell")
@@ -49,7 +51,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50.0
     }
-    //MARK: When tab table view cell 
+    //MARK: When tab table view cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let musicVC = self.storyboard?.instantiateViewController(withIdentifier: "MusicViewController") as! MusicViewController
 //        musicVC.modalPresentationStyle = .fullScreen
