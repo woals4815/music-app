@@ -18,6 +18,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
         homeTableView.delegate = self
         homeTableView.dataSource = self
+        //MARK: Dummy Datas
         let musicTitles = ["Crazy(Cover)", "Day 1", "Leave the Door Open", "Come and Get Your Love", "Mr. Blue Sky"]
         let artistNames = ["Daniela Andrade", "HONNE", "Silk Sonic", "Redbone", "Electric Light Orchestra"]
         let genres = [1,1,1,1,1]
@@ -48,9 +49,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50.0
     }
+    //MARK: When tab table view cell 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let musicVC = self.storyboard?.instantiateViewController(withIdentifier: "MusicViewController") as! MusicViewController
-        present(musicVC, animated: true, completion: nil)
+//        musicVC.modalPresentationStyle = .fullScreen
+        
+        musicVC.defaultTitle = musicData[indexPath.row].title!
+        musicVC.defaultArtist = musicData[indexPath.row].artistName!
+    
+        self.present(musicVC, animated: true, completion: nil)
     }
 }
 
