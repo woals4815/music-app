@@ -31,7 +31,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         //MARK: register reusable cell in viewdidload
         let nibName = UINib(nibName: "MusicListCell", bundle: nil)
         homeTableView.register(nibName, forCellReuseIdentifier: "MusicCell")
-        
     }
     
     //MARK: tableView datasource

@@ -7,11 +7,17 @@
 
 import UIKit
 
+protocol addPlaylistModalDelegate {
+    func addPlaylistTitle(title: String?)
+}
+
 class AddPlaylistModalViewController: UIViewController {
     @IBOutlet weak var modalView: UIView!
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var confirmBtn: UIButton!
     @IBOutlet weak var playlistTitleTextfield: UITextField!
+    
+    var delegate: addPlaylistModalDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +32,13 @@ class AddPlaylistModalViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func tabConfirmBtn(_ sender: UIButton) {
-        print(playlistTitleTextfield.text!)
+        let playlistTitle = playlistTitleTextfield.text!
+        if playlistTitle.count > 0 {
+            delegate?.addPlaylistTitle(title: playlistTitle)
+            self.dismiss(animated: true, completion: nil)
+        }else {
+            return
+        }
     }
     
     

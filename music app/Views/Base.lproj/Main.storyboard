@@ -51,7 +51,9 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="editBtn" destination="GTi-8h-Mlv" id="3vZ-7s-7b4"/>
                         <outlet property="playlistTableView" destination="Xd6-JI-WY4" id="wrg-SF-Pkw"/>
+                        <segue destination="4oW-SY-XFx" kind="show" identifier="playlistDetailSegue" id="XH4-qc-BBZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -363,6 +365,37 @@
             </objects>
             <point key="canvasLocation" x="138.46153846153845" y="88.862559241706151"/>
         </scene>
+        <!--Playlist Detail View Controller-->
+        <scene sceneID="JUt-e3-1bH">
+            <objects>
+                <viewController id="4oW-SY-XFx" customClass="PlaylistDetailViewController" customModule="music_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rbm-Y0-b9j">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5hS-nN-90e">
+                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="raI-Fu-4Nz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5hS-nN-90e" firstAttribute="top" secondItem="raI-Fu-4Nz" secondAttribute="top" id="2oz-NA-lVb"/>
+                            <constraint firstItem="raI-Fu-4Nz" firstAttribute="trailing" secondItem="5hS-nN-90e" secondAttribute="trailing" id="YEe-vE-KRy"/>
+                            <constraint firstItem="5hS-nN-90e" firstAttribute="leading" secondItem="raI-Fu-4Nz" secondAttribute="leading" id="ef6-Tw-IbD"/>
+                            <constraint firstItem="raI-Fu-4Nz" firstAttribute="bottom" secondItem="5hS-nN-90e" secondAttribute="bottom" id="wNr-2D-EHJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fm8-UT-1OI"/>
+                    <connections>
+                        <outlet property="playlistDetailTableView" destination="5hS-nN-90e" id="4Nk-7i-5fk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Kl-4B-NVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2654" y="-1327"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="bY2-j3-jD9">
             <objects>
@@ -455,7 +488,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HeK-E4-ECD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3476.9230769230767" y="-573.69668246445497"/>
+            <point key="canvasLocation" x="3642" y="-579"/>
         </scene>
     </scenes>
     <resources>
