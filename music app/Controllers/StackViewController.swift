@@ -18,6 +18,13 @@ class StackViewController: UIViewController {
         playlistTableView.delegate = self
         playlistTableView.dataSource = self
     }
+    @IBAction func addBtn(_ sender: UIBarButtonItem) {
+        guard let addPlaylistModalVC = self.storyboard?.instantiateViewController(withIdentifier: "addPlaylistModalVC") else {
+            fatalError("there's no VC")
+        }
+        addPlaylistModalVC.modalPresentationStyle = .overFullScreen
+        present(addPlaylistModalVC, animated: true, completion: nil)
+    }
     
     /*
     // MARK: - Navigation
@@ -45,4 +52,7 @@ extension StackViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
 }

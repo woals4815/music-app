@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O7t-Je-cBb">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,19 +13,19 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="StackViewController" customModule="music_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9gT-dN-Oda">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kp9-Li-i1J">
-                                <rect key="frame" x="0.0" y="44" width="375" height="51"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xd6-JI-WY4">
-                                <rect key="frame" x="0.0" y="95" width="375" height="523"/>
+                                <rect key="frame" x="0.0" y="139" width="390" height="622"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -43,7 +43,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Playlist" id="XQN-ar-wlu">
                         <barButtonItem key="leftBarButtonItem" title="Edit" id="GTi-8h-Mlv"/>
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="YT0-PV-YKL"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="YT0-PV-YKL">
+                            <connections>
+                                <action selector="addBtn:" destination="BYZ-38-t0r" id="Xeg-91-QzB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -59,15 +63,15 @@
             <objects>
                 <viewController id="Iy4-eD-mWN" customClass="MainViewController" customModule="music_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7MQ-Ux-bEN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="SAR-B8-5qw">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="DnN-By-h1b">
-                                <rect key="frame" x="20" y="61" width="335" height="47"/>
+                                <rect key="frame" x="20" y="105" width="350" height="47"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyF-qg-EpQ">
                                         <rect key="frame" x="0.0" y="0.0" width="27" height="12"/>
@@ -76,7 +80,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iQe-eQ-SXo">
-                                        <rect key="frame" x="0.0" y="16" width="335" height="32"/>
+                                        <rect key="frame" x="0.0" y="16" width="350" height="32"/>
                                         <segments>
                                             <segment title="전체"/>
                                             <segment title="장르"/>
@@ -90,7 +94,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4UM-x0-658">
-                                <rect key="frame" x="0.0" y="118" width="375" height="500"/>
+                                <rect key="frame" x="0.0" y="162" width="390" height="599"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -123,29 +127,29 @@
             <objects>
                 <viewController storyboardIdentifier="MusicViewController" id="gX1-rQ-5rF" customClass="MusicViewController" customModule="music_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vp5-ap-6e8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="sYs-ri-YlP">
-                                <rect key="frame" x="10" y="10" width="355" height="652"/>
+                                <rect key="frame" x="10" y="54" width="370" height="751"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="H8b-m4-SXA">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="300"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kanye album" translatesAutoresizingMaskIntoConstraints="NO" id="X7L-vz-6VD">
-                                                <rect key="frame" x="0.0" y="0.0" width="355" height="245"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="370" height="245"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="38v-Br-ZDi">
-                                                <rect key="frame" x="154" y="250" width="47" height="50"/>
+                                                <rect key="frame" x="161.66666666666666" y="250" width="47" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3d-i7-o8X">
-                                                        <rect key="frame" x="0.0" y="0.0" width="47" height="21.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="47" height="21.666666666666668"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvh-Ww-bgN">
-                                                        <rect key="frame" x="7" y="34" width="33" height="16"/>
+                                                        <rect key="frame" x="7" y="34.333333333333314" width="33" height="15.666666666666664"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -165,22 +169,22 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LhC-IO-T2P">
-                                        <rect key="frame" x="5" y="381" width="345" height="24.5"/>
+                                        <rect key="frame" x="5" y="381" width="360" height="24.333333333333314"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b2T-sg-vwh">
-                                                <rect key="frame" x="0.0" y="0.0" width="345" height="4"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="360" height="4"/>
                                             </progressView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="uqs-Ez-xP9">
-                                                <rect key="frame" x="0.0" y="4" width="345" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="4" width="360" height="20.333333333333332"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmY-zS-Vju">
-                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppN-c5-dBz">
-                                                        <rect key="frame" x="299" y="0.0" width="46" height="20.5"/>
+                                                        <rect key="frame" x="314.33333333333331" y="0.0" width="45.666666666666686" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -196,10 +200,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="mOn-kc-HmT">
-                                        <rect key="frame" x="0.0" y="486.5" width="355" height="165.5"/>
+                                        <rect key="frame" x="0.0" y="486.33333333333337" width="370" height="264.66666666666663"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pd2-BX-yeq">
-                                                <rect key="frame" x="335" y="0.0" width="20" height="50"/>
+                                                <rect key="frame" x="350.33333333333331" y="0.0" width="19.666666666666686" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="fiW-Ih-TF3"/>
                                                 </constraints>
@@ -209,18 +213,18 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="htP-oq-5La">
-                                                <rect key="frame" x="0.0" y="50" width="355" height="115.5"/>
+                                                <rect key="frame" x="0.0" y="49.999999999999986" width="370" height="214.66666666666663"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJx-v5-zcn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="115.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="25.333333333333332" height="214.66666666666666"/>
                                                         <state key="normal" image="backward.fill" catalog="system"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hod-hX-kZj">
-                                                        <rect key="frame" x="170" y="0.0" width="15" height="115.5"/>
+                                                        <rect key="frame" x="177.66666666666666" y="0.0" width="15" height="214.66666666666666"/>
                                                         <state key="normal" image="play.fill" catalog="system"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgY-hO-4NT">
-                                                        <rect key="frame" x="330" y="0.0" width="25" height="115.5"/>
+                                                        <rect key="frame" x="344.66666666666669" y="0.0" width="25.333333333333314" height="214.66666666666666"/>
                                                         <state key="normal" image="forward.fill" catalog="system"/>
                                                     </button>
                                                 </subviews>
@@ -276,11 +280,11 @@
             <objects>
                 <viewController storyboardIdentifier="modalVC" title="Modal" id="ZFg-zq-JGc" customClass="ModalViewController" customModule="music_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nR8-hc-jXt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IL4-y6-wGW">
-                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <rect key="frame" x="70" y="297" width="250" height="250"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIG-Y4-sGq">
                                         <rect key="frame" x="5" y="5" width="20" height="22"/>
@@ -328,7 +332,7 @@
             <objects>
                 <viewController id="7YZ-Zl-nLQ" customClass="PlaylistViewController" customModule="music_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2T7-wf-BnT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="LqA-wV-BTI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -366,7 +370,7 @@
                     <tabBarItem key="tabBarItem" title="" image="square.stack.3d.down.right" catalog="system" id="SNX-rQ-OvA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zeK-YM-if2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -377,6 +381,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="drw-um-TJy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1607.6923076923076" y="-562.32227488151659"/>
+        </scene>
+        <!--Add Playlist Modal View Controller-->
+        <scene sceneID="1fx-tq-8Jf">
+            <objects>
+                <viewController storyboardIdentifier="addPlaylistModalVC" id="Eqa-R8-Tw3" customClass="AddPlaylistModalViewController" customModule="music_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KRi-iL-UNT">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHy-QK-W9G">
+                                <rect key="frame" x="70" y="297" width="250" height="250"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LUO-nb-5fV">
+                                        <rect key="frame" x="10" y="108" width="230" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="mgS-yi-FNx">
+                                        <rect key="frame" x="34.666666666666671" y="210" width="181" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUu-db-SNM">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="tabCancelBtn:" destination="Eqa-R8-Tw3" eventType="touchUpInside" id="NvG-Rh-Rxr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCD-PP-VFj">
+                                                <rect key="frame" x="126" y="0.0" width="55" height="30"/>
+                                                <state key="normal" title="Confirm"/>
+                                                <connections>
+                                                    <action selector="tabConfirmBtn:" destination="Eqa-R8-Tw3" eventType="touchUpInside" id="p5s-oJ-9Ax"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Playlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Il-AA-qfw">
+                                        <rect key="frame" x="10" y="20" width="92" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="mgS-yi-FNx" firstAttribute="centerX" secondItem="gHy-QK-W9G" secondAttribute="centerX" id="6xJ-E2-NCE"/>
+                                    <constraint firstItem="LUO-nb-5fV" firstAttribute="leading" secondItem="gHy-QK-W9G" secondAttribute="leading" constant="10" id="FVe-uo-Jc5"/>
+                                    <constraint firstItem="7Il-AA-qfw" firstAttribute="leading" secondItem="gHy-QK-W9G" secondAttribute="leading" constant="10" id="JAn-O6-3Io"/>
+                                    <constraint firstItem="LUO-nb-5fV" firstAttribute="centerY" secondItem="gHy-QK-W9G" secondAttribute="centerY" id="SCU-S8-Xdr"/>
+                                    <constraint firstAttribute="trailing" secondItem="LUO-nb-5fV" secondAttribute="trailing" constant="10" id="Unw-ZR-akR"/>
+                                    <constraint firstAttribute="bottom" secondItem="mgS-yi-FNx" secondAttribute="bottom" constant="10" id="kiT-HZ-1Lh"/>
+                                    <constraint firstAttribute="height" constant="250" id="mPx-4b-mQo"/>
+                                    <constraint firstItem="7Il-AA-qfw" firstAttribute="top" secondItem="gHy-QK-W9G" secondAttribute="top" constant="20" id="nCM-BW-0tV"/>
+                                    <constraint firstAttribute="width" constant="250" id="rMa-vj-R2t"/>
+                                    <constraint firstItem="LUO-nb-5fV" firstAttribute="centerX" secondItem="gHy-QK-W9G" secondAttribute="centerX" id="vsu-LJ-7Lb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HmP-Mn-ZNh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gHy-QK-W9G" firstAttribute="centerY" secondItem="KRi-iL-UNT" secondAttribute="centerY" id="qSg-PL-RLU"/>
+                            <constraint firstItem="gHy-QK-W9G" firstAttribute="centerX" secondItem="KRi-iL-UNT" secondAttribute="centerX" id="rWw-kD-Jcv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="UUu-db-SNM" id="pe1-Sc-ViH"/>
+                        <outlet property="confirmBtn" destination="rCD-PP-VFj" id="l2d-RY-0yo"/>
+                        <outlet property="modalView" destination="gHy-QK-W9G" id="7Uh-kV-lsw"/>
+                        <outlet property="playlistTitleTextfield" destination="LUO-nb-5fV" id="cup-9b-iGx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HeK-E4-ECD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3476.9230769230767" y="-573.69668246445497"/>
         </scene>
     </scenes>
     <resources>
