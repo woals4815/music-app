@@ -11,7 +11,7 @@
         <!--My Playlist-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StackViewController" customModule="music_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StackVC" id="BYZ-38-t0r" customClass="StackViewController" customModule="music_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,6 +322,7 @@
                     </view>
                     <connections>
                         <outlet property="dismissBtn" destination="gIG-Y4-sGq" id="4dx-ai-OAz"/>
+                        <outlet property="listTableView" destination="y26-xB-nT3" id="Y5T-BD-jNW"/>
                         <outlet property="popupView" destination="IL4-y6-wGW" id="WLK-nW-BNv"/>
                     </connections>
                 </viewController>
@@ -394,7 +395,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Kl-4B-NVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2654" y="-1327"/>
+            <point key="canvasLocation" x="3328" y="-1329"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bY2-j3-jD9">

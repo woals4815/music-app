@@ -12,7 +12,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var homeTableView: UITableView!
     
     var musicData: [Music] = [Music]()
-    
+    var playlists = Playlists.sharedPlaylists.playlists
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,6 +31,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         //MARK: register reusable cell in viewdidload
         let nibName = UINib(nibName: "MusicListCell", bundle: nil)
         homeTableView.register(nibName, forCellReuseIdentifier: "MusicCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print(playlists)
     }
     
     //MARK: tableView datasource

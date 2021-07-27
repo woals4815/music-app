@@ -11,3 +11,10 @@ struct Playlist {
     var musicList: [Music]?
     var listName: String?
 }
+
+class Playlists {
+    static let sharedPlaylists = Playlists()
+    
+    public var playlists = [Playlist]()
+    private init() {}
+}

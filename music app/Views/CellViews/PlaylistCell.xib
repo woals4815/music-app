@@ -17,27 +17,34 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ePd-3r-Td4">
-                        <rect key="frame" x="10" y="2" width="91.5" height="40"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kanye album" translatesAutoresizingMaskIntoConstraints="NO" id="UFd-Dp-WYf">
-                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kanye album" translatesAutoresizingMaskIntoConstraints="NO" id="UFd-Dp-WYf">
+                                <rect key="frame" x="10" y="2" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Yo8-9x-1S7"/>
                                     <constraint firstAttribute="width" constant="40" id="nW1-Lz-qds"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHQ-9A-YjD">
-                                <rect key="frame" x="50" y="0.0" width="41.5" height="40"/>
+                                <rect key="frame" x="60" y="2" width="260" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="UFd-Dp-WYf" firstAttribute="top" secondItem="ePd-3r-Td4" secondAttribute="top" constant="2" id="ZCL-IU-DUd"/>
+                            <constraint firstItem="UFd-Dp-WYf" firstAttribute="leading" secondItem="ePd-3r-Td4" secondAttribute="leading" constant="10" id="vXh-NE-PCd"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="ePd-3r-Td4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1dq-gf-wHR"/>
                     <constraint firstItem="ePd-3r-Td4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DOY-2z-7TP"/>
-                    <constraint firstItem="ePd-3r-Td4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="YnP-yT-MvS"/>
+                    <constraint firstAttribute="trailing" secondItem="ePd-3r-Td4" secondAttribute="trailing" id="N2I-mq-iH6"/>
+                    <constraint firstAttribute="bottom" secondItem="ePd-3r-Td4" secondAttribute="bottom" id="US6-n6-jlC"/>
+                    <constraint firstItem="ePd-3r-Td4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WZo-ub-0Yh"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

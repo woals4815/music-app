@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 class MusicViewController: UIViewController {
     @IBOutlet weak var musicTitle: UILabel!
     @IBOutlet weak var artistName: UILabel!
@@ -22,6 +24,8 @@ class MusicViewController: UIViewController {
     
     var defaultTitle: String = "Default Title"
     var defaultArtist: String = "Unknown"
+    var playlists: [Playlist]? = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,22 +49,12 @@ class MusicViewController: UIViewController {
         artistName.text = defaultArtist
     }
     @IBAction func tabAddBtn(_ sender: UIButton) {
-        guard let modalVC = self.storyboard?.instantiateViewController(withIdentifier: "modalVC") else {
+        guard let modalVC = self.storyboard?.instantiateViewController(withIdentifier: "modalVC") as? ModalViewController  else {
              fatalError("No vc")
         }
+        
         modalVC.modalPresentationStyle = .overFullScreen
+//        modalVC.playlists = [Playlist(musicList: nil, listName: "test1")]
         present(modalVC, animated: true, completion: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -8,12 +8,14 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
+    
+    var playlists = Playlists.sharedPlaylists.playlists
+    var homeVC: MainViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectedIndex = 1
+
     }
-    
 
     /*
     // MARK: - Navigation
