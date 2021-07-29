@@ -42,7 +42,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Playlist" id="XQN-ar-wlu">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="GTi-8h-Mlv"/>
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="GTi-8h-Mlv">
+                            <connections>
+                                <action selector="tabEditBtn:" destination="BYZ-38-t0r" id="311-P7-0zv"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="YT0-PV-YKL">
                             <connections>
                                 <action selector="addBtn:" destination="BYZ-38-t0r" id="Xeg-91-QzB"/>
@@ -275,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tze-3N-fDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2537" y="89"/>
+            <point key="canvasLocation" x="2537" y="114"/>
         </scene>
         <!--Modal-->
         <scene sceneID="aV9-4j-yVo">
@@ -400,7 +404,7 @@
         <!--Navigation Controller-->
         <scene sceneID="bY2-j3-jD9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sye-iJ-9DX" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sye-iJ-9DX" customClass="NavigationController" customModule="music_app" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="square.stack.3d.down.right" catalog="system" id="SNX-rQ-OvA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zeK-YM-if2">

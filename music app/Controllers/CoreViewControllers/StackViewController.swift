@@ -9,8 +9,9 @@ import UIKit
 
 class StackViewController: UIViewController {
     
-    var playlists = Playlists.sharedPlaylists.playlists
+    var playlists = Playlists.sharedPlaylists
     var selectedIndex: IndexPath?
+    var detailVC: PlaylistDetailViewController?
     
     @IBOutlet weak var playlistTableView: UITableView!
     @IBOutlet weak var editBtn: UIBarButtonItem!
@@ -34,11 +35,14 @@ class StackViewController: UIViewController {
         present(addPlaylistModalVC, animated: true, completion: nil)
     }
     
+    @IBAction func tabEditBtn(_ sender: UIBarButtonItem) {
+        print("Edit 버튼 눌렀을 때: \(playlists)")
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "playlistDetailSegue" {
             let detailVC = segue.destination as! PlaylistDetailViewController
-            detailVC.title = playlists[selectedIndex!.row].listName
-            detailVC.playlist = playlists[selectedIndex!.row]
+            detailVC.title = playlists.playlists[selectedIndex!.row].listName
+            detailVC.playlist = playlists.playlists[selectedIndex!.row]
         }
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -51,7 +55,7 @@ extension StackViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return playlists.count
+        return playlists.playlists.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -59,7 +63,7 @@ extension StackViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("no cell")
         }
         
-        cell.listName.text = playlists[indexPath.row].listName
+        cell.listName.text = playlists.playlists[indexPath.row].listName
         
         return cell
     }
@@ -71,12 +75,14 @@ extension StackViewController: UITableViewDelegate, UITableViewDataSource {
         
         selectedIndex = indexPath
         
+        detailVC?.playlist = playlists.playlists[indexPath.row]
+        
         performSegue(withIdentifier: "playlistDetailSegue", sender: nil)
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            playlists.remove(at: indexPath.row)
+            playlists.playlists.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -85,8 +91,9 @@ extension StackViewController: UITableViewDelegate, UITableViewDataSource {
 //MARK: addPlaylistModalDelegate extension
 extension StackViewController: addPlaylistModalDelegate {
     func addPlaylistTitle(title: String?) {
-        let list = Playlist(musicList: nil, listName: title!)
-        playlists.append(list)
+        let list = Playlist(musicList: MusicList.sharedMusicList, listName: title!)
+        playlists.playlists.append(list)
+        
         playlistTableView.reloadData()
     }
 }

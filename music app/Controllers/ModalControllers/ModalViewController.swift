@@ -14,7 +14,7 @@ class ModalViewController: UIViewController {
     @IBOutlet weak var listTableView: UITableView!
     
     var playlists = Playlists.sharedPlaylists.playlists
-    
+    var music: Music?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -37,7 +37,7 @@ class ModalViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         listTableView.reloadData()
-        print("모달 뷰 playlists: \(playlists)")
+        print(playlists)
     }
 }
 
@@ -53,5 +53,12 @@ extension ModalViewController: UITableViewDelegate, UITableViewDataSource {
         }
         cell.listName.text = playlists[indexPath.row].listName
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let playlist = playlists[indexPath.row]
+        playlist.musicList.musicList.append(music!)
+        print("음악이 들어간 리스트들이 나와야 하늗데: \(playlist)")
+        print("ahhhhh: \(playlist.musicList.musicList)")
+        self.dismiss(animated: true, completion: nil)
     }
 }

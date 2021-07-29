@@ -25,7 +25,7 @@ class MusicViewController: UIViewController {
     var defaultTitle: String = "Default Title"
     var defaultArtist: String = "Unknown"
     var playlists: [Playlist]? = []
-    
+    var music: Music?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,12 +48,13 @@ class MusicViewController: UIViewController {
         musicTitle.text = defaultTitle
         artistName.text = defaultArtist
     }
+    
     @IBAction func tabAddBtn(_ sender: UIButton) {
         guard let modalVC = self.storyboard?.instantiateViewController(withIdentifier: "modalVC") as? ModalViewController  else {
              fatalError("No vc")
         }
-        
         modalVC.modalPresentationStyle = .overFullScreen
+        modalVC.music = music
 //        modalVC.playlists = [Playlist(musicList: nil, listName: "test1")]
         present(modalVC, animated: true, completion: nil)
     }

@@ -7,15 +7,15 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController {
     
     @IBOutlet weak var homeTableView: UITableView!
     
     var musicData: [Music] = [Music]()
-    var playlists = Playlists.sharedPlaylists.playlists
+    var playlists = Playlists.sharedPlaylists
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         homeTableView.delegate = self
         homeTableView.dataSource = self
         
@@ -34,14 +34,20 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print(playlists)
+        print("home VC: \(playlists.playlists)")
     }
+    
+}
+
+//MARK: Extension TableViewdelegate, Datasource
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     //MARK: tableView datasource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return musicData.count
     }
-    //MARK: tableView delegate
+    
+    //MARK: tableView delegate function
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MusicCell") as? MusicListCell else {
             fatalError("there's no cell")
@@ -50,19 +56,19 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.artistName.text = musicData[indexPath.row].artistName!
         return cell
     }
+    
     //MARK: tableView cell height custom
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50.0
     }
+    
     //MARK: When tab table view cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let musicVC = self.storyboard?.instantiateViewController(withIdentifier: "MusicViewController") as! MusicViewController
-//        musicVC.modalPresentationStyle = .fullScreen
-        
+        musicVC.music = musicData[indexPath.row]
         musicVC.defaultTitle = musicData[indexPath.row].title!
         musicVC.defaultArtist = musicData[indexPath.row].artistName!
     
         self.present(musicVC, animated: true, completion: nil)
     }
 }
-

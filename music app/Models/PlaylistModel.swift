@@ -8,8 +8,15 @@
 import Foundation
 
 struct Playlist {
-    var musicList: [Music]?
+    var musicList =  MusicList.sharedMusicList
     var listName: String?
+}
+
+class MusicList {
+    static let sharedMusicList = MusicList()
+    
+    public var musicList = [Music]()
+    private init() {}
 }
 
 class Playlists {
